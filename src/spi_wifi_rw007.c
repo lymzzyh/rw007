@@ -604,7 +604,7 @@ rt_err_t rt_hw_wifi_init(const char *spi_device_name)
         struct rt_spi_configuration cfg;
         cfg.data_width = 8;
         cfg.mode = RT_SPI_MODE_0 | RT_SPI_MSB; /* SPI Compatible: Mode 0. */
-        cfg.max_hz = 30 * 1000000;             /* 15M 007 max 30M */
+        cfg.max_hz = 2 * 1000000;             /* 15M 007 max 30M */
         rt_spi_configure(rw007_spi.spi_device, &cfg);
     }
 
